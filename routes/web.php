@@ -23,7 +23,7 @@ Route::group(['middieware'=>['web']],function (){
     //后台（带admin前缀）
     Route::group(['prefix' => 'admin','namespace'=>'Admin'],function (){
         //crypt加密解密(测试路由)
-      //  Route::any('crypt','LoginController@crypt');
+         Route::any('crypt','LoginController@crypt');
         //login登录路由
         Route::any('login','LoginController@login');
         //code验证码路由
