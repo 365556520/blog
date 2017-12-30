@@ -21,7 +21,7 @@ Route::group(['middieware'=>['web']],function (){
         Route::get('/a/{art_id}','IndexController@article');
     });
     //后台（带admin前缀）
-    Route::group(['prefix' => 'admin','namespace'=>'admin'],function (){
+    Route::group(['prefix' => 'admin','namespace'=>'Admin'],function (){
         //crypt加密解密(测试路由)
       //  Route::any('crypt','LoginController@crypt');
         //login登录路由
