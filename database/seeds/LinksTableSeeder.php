@@ -11,21 +11,6 @@ class LinksTableSeeder extends Seeder
      */
     public function run()
     {
-        $data= [
-            [
-                'link_name' => '百度',
-                'link_title' => '国内称霸搜索引擎',
-                'link_url' => 'http://www.baidu.com',
-                'link_order' => 1,
-            ],
-            [
-                'link_name' => '淘宝',
-                'link_title' => '国内购物网站',
-                'link_url' => 'http://www.taobao.com',
-                'link_order' => 2,
-            ]
-        ];
-        DB::table('links')->insert($data);
         $admin= [
             [
                 'user_name' => 'aaa',
