@@ -13,7 +13,7 @@ class LinksTableSeeder extends Seeder
     {
         \App\Http\Model\User::create([
         'user_name' => 'aaa',
-        'user_pass' => bcrypt('aaaaaa'),
+        'user_pass' => \Illuminate\Support\Facades\Crypt::bcrypt('aaaaaa'),
         ]);
     }
 }
