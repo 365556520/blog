@@ -28,12 +28,6 @@ class LinksTableSeeder extends Seeder
         DB::table('links')->insert($data);
         $admin= [
             [
-                'link_name' => '百度',
-                'link_title' => '国内称霸搜索引擎',
-                'link_url' => 'http://www.baidu.com',
-                'link_order' => 1,
-            ],
-            [
                 'user_name' => 'aaa',
                 'user_pass' => bcrypt('aaaaaa'),
             ]
