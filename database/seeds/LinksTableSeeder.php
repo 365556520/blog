@@ -11,13 +11,9 @@ class LinksTableSeeder extends Seeder
      */
     public function run()
     {
-        $admin= [
-            [
-                'user_name' => 'aaa',
-                'user_pass' => bcrypt('aaaaaa'),
-            ]
-        ];
-        DB::table('user')->insert($admin);
-
+        \App\Http\Model\User::create([
+        'user_name' => 'aaa',
+        'user_pass' => bcrypt('aaaaaa'),
+        ]);
     }
 }
