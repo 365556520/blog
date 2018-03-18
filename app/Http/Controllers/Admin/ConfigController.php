@@ -172,12 +172,15 @@ class ConfigController extends CommonController
        // echo \Illuminate\Support\Facades\Config::get('web.web_count'); //获取文件内数组的值
         //从数据库中得到这个2个字段的数值all();就是一个纯净的数组了
         $config = Config::pluck('conf_content','conf_name')->all();
+
         //base_path()是根目录找到\config\web.php的文件没有会自己创建这个文件
         $path =  base_path().'\config\web.php';
         //把数组转换成字符串用var_export($config,true);
         $str = '<?php return '.var_export($config,true).';';
         //写到文件里面 用file_put_contents($path,$str);第一个是路径第二个字符串是内容
+
         file_put_contents($path,$str);
+
     }
     //显示
     public function show(){
